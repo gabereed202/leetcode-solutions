@@ -17,6 +17,15 @@ class TreeNode:
         self.right = right
 
 class Solution:
+    """
+    Solution logic:
+        Recursively call this method for the left and right children of the current node
+        in both trees until the nodes' values are not equal, or they are both null.
+
+        If they are both null, return true, else return false. This works because we need both
+        the left and right subtrees at all steps to evaluate to true in order for the final
+        result to be true.
+    """
     def isSameTree(self, p: TreeNode, q: TreeNode) -> bool:
         if p == None and q == None:
             return True

@@ -15,6 +15,17 @@ Output: "bb"
 """
 
 class Solution:
+    """
+    Solution logic:
+        Loop over each character in the string. At each character do the following:
+            1. Move two pointers outward from the current character, starting to the
+                left and right of the current character until the values are not equal.
+            2. Check if the distance between the two pointers is longer than the current
+                longest substring and update the longest substring if needed.
+            3. Repeat 1-2 but with pointers starting at the current character and one to
+                the right. This is for even length palindromes.
+            4. Return the longest palindromic substring.
+    """
     def longestPalindrome(self, s: str) -> str:
         longest_sub = ""
         longest_len = 0

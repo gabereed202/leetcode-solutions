@@ -22,6 +22,15 @@ n == height.length
 """
 
 class Solution:
+    """
+    Solution logic:
+        Start with one pointer at the beginning of the list and one at the end of the list.
+        While the pointers have not passed each other do the following:
+            1. Check if the current volume of water is greater than previous max volume
+            2. Check the height at both points and move the pointer with the shorter
+                height towards the other pointer
+        Return the max volume found
+    """
     def maxArea(self, height) -> int:
 
         left = 0
